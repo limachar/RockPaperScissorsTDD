@@ -12,6 +12,7 @@ public class RPSTest {
     Papers paper = new Papers("PAPER");
     Scissors scissors = new Scissors("SCISSORS");
     Computer computer = new Computer(rock, paper, scissors);
+    Game game = new Game();
 
     @Test
     public void classReturnsGestureNameRock(){
