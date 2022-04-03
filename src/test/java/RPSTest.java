@@ -36,4 +36,16 @@ public class RPSTest {
     public void computerReturnsKeyFromValueIterationOverHashMap(){
         assertEquals("ROCK", computer.findAvailableGestureByNumber(0));
     }
+    @Test
+    public void userWins(){
+        assertEquals("USER WINS", game.compareUserChoiceToComputerChoice("ROCK", "SCISSORS"));
+    }
+    @Test
+    public void computerWins(){
+        assertEquals("COMPUTER WINS", game.compareUserChoiceToComputerChoice("PAPER", "SCISSORS"));
+    }
+    @Test
+    public void draw(){
+        assertEquals("DRAW", game.compareUserChoiceToComputerChoice("PAPER", "PAPER"));
+    }
 }
