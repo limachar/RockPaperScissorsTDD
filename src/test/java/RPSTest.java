@@ -24,4 +24,15 @@ public class RPSTest {
     public void classReturnsGestureNameScissors(){
         assertEquals("SCISSORS", scissors.getName());
     }
+    @RepeatedTest(10)
+    public void computerGeneratesRandomNumber3Bound(){
+        Integer[] expectedNumbers = {0, 1, 2};
+        List<Integer> numbers = new ArrayList<>(Arrays.asList(expectedNumbers));
+
+        assertTrue(numbers.contains(computer.generateRandomNumber()));
+    }
+    @Test
+    public void computerReturnsKeyFromValueIterationOverHashMap(){
+        assertEquals("ROCK", computer.findAvailableGestureByNumber(0));
+    }
 }
